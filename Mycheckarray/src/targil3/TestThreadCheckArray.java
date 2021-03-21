@@ -3,6 +3,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class TestThreadCheckArray {
+	private int a;
 	public static void main(String[] args) {
 		try (Scanner input = new Scanner(System.in)) {
 			Thread thread1, thread2;
@@ -10,6 +11,7 @@ public class TestThreadCheckArray {
 			int num  = input.nextInt();
 			ArrayList <Integer> array  = new ArrayList<>();
 			System.out.println("Enter numbers for array");
+			
 			
 			for (int index = 0; index < num; index++) 
 				array.add(index,input.nextInt()); 
