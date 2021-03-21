@@ -59,7 +59,7 @@ public class ThreadCheckArray implements Runnable {
 	public void run() {
 		if (array.size() != 1)
 			if (Thread.currentThread().getName().equals("thread1"))
-				rec(array.length-1, b - array.get(array.size() - 1));
+				rec(array.size()-1, b - array.get(array.size() - 1));
 			else 
 				rec(array.size()-1, b);
 		if (array.size() == 1)
@@ -75,7 +75,7 @@ public class ThreadCheckArray implements Runnable {
 		if (flag)
 		{
 			if (Thread.currentThread().getName().equals("thread1"))
-				winArray[array.length - 1] = true;
+				winArray[array.size() - 1] = true;
 			synchronized (sd) 
 			{
 				sd.setWinArray(winArray);
