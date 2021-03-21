@@ -1,6 +1,7 @@
+ 
 package checkarray;
-import java.util.ArrayList;
 import java.util.Scanner;
+
 
 public class TestThreadCheckArray {
 	public static void main(String[] args) {
@@ -8,11 +9,11 @@ public class TestThreadCheckArray {
 			Thread thread1, thread2;
 			System.out.println("Enter array size");
 			int num  = input.nextInt();
-			ArrayList <Integer> array = new ArrayList<>() ;
+			int [] array = new int[num];
 			System.out.println("Enter numbers for array");
 			
 			for (int index = 0; index < num; index++) 
-				array.add(input.nextInt());
+				array[index] = input.nextInt();
 			
 			System.out.println("Enter number");
 			num = input.nextInt();
@@ -37,9 +38,9 @@ public class TestThreadCheckArray {
 				System.out.println("Sorry");
 				return;
 			}
-			System.out.println("Solution for b : " + sd.getB() + ",n = " + sd.getArray().size());
+			System.out.println("Solution for b : " + sd.getB() + ",n = " + sd.getArray().length);
 			System.out.print("I:    ");
-			for(int index = 0; index < sd.getArray().size() ; index++)
+			for(int index = 0; index < sd.getArray().length ; index++)
 				System.out.print(index + "    ");
 			System.out.println();
 			System.out.print("A:    ");
