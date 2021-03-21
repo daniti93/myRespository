@@ -1,7 +1,5 @@
- 
-package checkarray;
+package targil3;
 import java.util.Scanner;
-
 
 public class TestThreadCheckArray {
 	public static void main(String[] args) {
